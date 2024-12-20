@@ -4,6 +4,11 @@ import json
 from docx import Document
 import os
 
+if "OPENAI_API_KEY" in st.secrets:
+    st.success("Secrets에서 API 키가 로드되었습니다.")
+else:
+    st.error("Secrets.toml에서 API 키를 찾을 수 없습니다.")
+    
 # OpenAI API 키 설정 (환경 변수로 처리)
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 

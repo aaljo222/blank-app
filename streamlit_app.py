@@ -5,7 +5,7 @@ from docx import Document
 import os
 
 # OpenAI API 키 설정 (환경 변수로 처리)
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 # 앱 제목
 st.title("OpenAI Fine-Tuning Workflow")
